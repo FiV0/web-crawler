@@ -1,5 +1,6 @@
 (ns web-crawler.core
-  (:require [clojure.tools.cli :refer [parse-opts]])
+  (:require [clojure.tools.cli :refer [parse-opts]]
+            [web-crawler.graph :as graph])
   (:gen-class))
 
 (def cli-options
@@ -11,4 +12,4 @@
   [& args]
   (let [options (-> (parse-opts args cli-options) :options)
         domain (:domain options)]
-    (println domain)))
+    (graph/visualize-sitemap-graph domain)))
