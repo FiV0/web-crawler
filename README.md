@@ -10,6 +10,11 @@ tested, nor does it contain tests. It does not process subdomains correctly.
 You need to have Java version 1.6 or later installed (check with `java -version`). To build
 or run the program you need [leiningen](https://leiningen.org/). Leiningen is a buildtool for 
 clojure. Please follow the instructions at the leiningen homepage to install it. 
+
+Use of this project requires that [Graphviz](http://www.graphviz.org) is installed, 
+which can be checked by running `dot -V` at the command line.  If it's not installed, 
+you can follow the instructions at http://www.graphviz.org/download/ .
+
 You can then either run the program directly via leiningen, like so:
 ```
 lein run -d www.example.com 

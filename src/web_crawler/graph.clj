@@ -5,7 +5,7 @@
   (:gen-class))
 
 (defn compute-graph
-  "Given a url. Compute a simple graph on internal links
+  "Given a url, compute a simple graph on internal links
   of the website."
   [url]
   (loop [seen #{url}
