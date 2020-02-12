@@ -17,10 +17,10 @@ you can follow the instructions at http://www.graphviz.org/download/ .
 
 You can then either run the program directly via leiningen, like so:
 ```
-lein run -d www.example.com 
+lein run -d https://example.com 
 ```
 or build a standalone jar file for the JVM as follows:
 ```
 lein uberjar 
-java -jar target/uberjar/authorizer-0.1.0-SNAPSHOT-standalone.jar < resources/operations_large_example.txt
+java -jar target/uberjar/web-crawler-0.1.0-SNAPSHOT-standalone.jar -d https://example.com
 ```
