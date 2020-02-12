@@ -23,7 +23,7 @@
 (defn visualize-sitemap-graph
   "Given a url, print the sitemap."
   [url]
-  (let [g (compute-graph url)]
+  (let [g (compute-graph (uri/uri url))]
     (viz/view-graph
      (keys g) g
      :node->descriptor (fn [url] {:label (str url)}))))
